@@ -7,6 +7,10 @@ import About from './About';
 import Services from './Services';
 import Contact from './Contact';
 import Gallery from './Gallery';
+import Login from './Login';
+import LayoutAdmin from './admindashboard/LayoutAdmin';
+import AdminHome from './admindashboard/AdminHome';
+import AdminViewFeed from './admindashboard/AdminViewFeed';
 
 function App() {
   return (
@@ -19,6 +23,11 @@ function App() {
            <Route path='gallery' element={<Gallery />} />
            <Route path='contact' element={<Contact />} />
        </Route>
+       <Route path="login" element={<Login />} />
+       <Route path="/admin" element={<LayoutAdmin />}>
+           <Route index element={<AdminHome/>} />
+           <Route path='viewfeed' element={<AdminViewFeed />} />
+        </Route>
      </Routes>
     </BrowserRouter>
   );
