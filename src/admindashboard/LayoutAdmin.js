@@ -1,8 +1,16 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import AdminSidebar from "./AdminSidebar";
+import { useEffect } from "react";
 
 export default function LayoutAdmin()
 {
+   const navigate = useNavigate()
+   useEffect(()=>{
+      let data = localStorage.getItem('loggedin')
+      if(data==null){
+           navigate("/login")
+      }
+   },[])
    return(<>
          <header className="container-fluid text-center p-3 bg-info">
             <h1>Admin Dashboard</h1>

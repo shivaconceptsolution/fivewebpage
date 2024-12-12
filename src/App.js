@@ -11,6 +11,7 @@ import Login from './Login';
 import LayoutAdmin from './admindashboard/LayoutAdmin';
 import AdminHome from './admindashboard/AdminHome';
 import AdminViewFeed from './admindashboard/AdminViewFeed';
+import Logout from './admindashboard/Logout';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
        <Route path="/admin" element={<LayoutAdmin />}>
            <Route index element={<AdminHome/>} />
            <Route path='viewfeed' element={<AdminViewFeed />} />
+           <Route path='logout' element={<Logout />} />
         </Route>
      </Routes>
     </BrowserRouter>

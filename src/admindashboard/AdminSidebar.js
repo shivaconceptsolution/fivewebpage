@@ -20,7 +20,7 @@ export default function AdminSidebar()
          <li><Link to="/admin/viewfeed">View Feedback</Link></li> 
          <li><Link to="/admin">Home</Link></li> 
          <li><Link to="/admin/viewfeed">View Feedback</Link></li>  
-         <li><Link to="/login">Logout</Link></li>     
+         <li><Link to="/admin/logout">Logout</Link></li>     
          </ul> 
    </div>)
 }
